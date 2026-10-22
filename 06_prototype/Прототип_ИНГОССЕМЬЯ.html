@@ -190,12 +190,12 @@ button.chip[aria-pressed="true"]{background:var(--blue);color:#fff;border-color:
 .hero{background:var(--soft);border-radius:var(--r);padding:var(--s4)}
 .field{display:flex;flex-direction:column;gap:4px}
 .field label,.field .lbl{font-weight:600;font-size:14px}
-.field input,.field select,.field textarea{border:1.5px solid #8A94B5;border-radius:var(--r-sm);padding:10px 12px;background:#fff;min-height:44px}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
+.field input,.field select,.field textarea{border:1.5px solid #8A94B5;border-radius:var(--r-sm);padding:10px 12px;background:#fff;min-height:44px;width:100%;min-width:0}
+.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s3)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .med{display:flex;gap:8px;align-items:center}
 .med input:first-child{flex:1;min-width:0}
-.med input:nth-child(2){width:96px}
+.med input:nth-child(2){flex:none;width:128px}
 .tariffs{display:flex;flex-direction:column;gap:var(--s3)}
 .tcard{border:2px solid var(--line);border-radius:var(--r);padding:var(--s4);background:#fff;text-align:left;width:100%;display:block}
 .tcard[aria-checked="true"]{border-color:var(--blue);background:var(--soft)}
@@ -330,7 +330,7 @@ button.chip[aria-pressed="true"]{background:var(--blue);color:#fff;border-color:
   .iphone .scr:last-child{padding-bottom:calc(var(--s4) + env(safe-area-inset-bottom))}
   #m-client .foot{display:none}
   .scr h1{font-size:22px}
-  .med input:nth-child(2){width:110px}
+  .med input:nth-child(2){width:132px}
   .composer .btn{padding:10px 14px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
